@@ -1,0 +1,38 @@
+body: {
+  font-size: 14px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: gray;
+}
+
+nav ul li:first-child {
+  float: left;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px;
+  float: right;
+  font-size: 125%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.content {
+  overflow: scroll;
+}
+
+.jumbotron {
+  padding-top: 50px;
+  height: 1000px;
+}
+
+.title {
+  font-size: 400%;
+}
