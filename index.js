@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("connected")
 
   const navbar = document.querySelector(".navbar")
   const sticky = navbar.offsetTop;
@@ -13,5 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove("sticky")
     }
   }
+
+
 
 })
