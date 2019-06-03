@@ -66,3 +66,7 @@ a:visited {
 .title:hover {
   transform: scale(1.20) rotate(-5deg);
 }
+
+.about {
+  font-size: 8vw;
+}
