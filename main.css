@@ -84,3 +84,19 @@ a:visited {
 .jumbotron .projects {
   align-items: flex-start;
 }
+
+.contact ul {
+  display: inline;
+  text-align: center;
+}
+
+.contact ul li {
+  display: inline;
+  list-style: none;
+  padding: 0vw 3vw;
+}
+
+.contact img {
+  width: 10vw;
+  height: 10vw;
+}
