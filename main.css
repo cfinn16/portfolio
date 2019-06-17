@@ -85,18 +85,23 @@ a:visited {
   align-items: flex-start;
 }
 
-.contact ul {
+.logos {
   display: inline;
   text-align: center;
 }
 
-.contact ul li {
+.logos li {
   display: inline;
   list-style: none;
   padding: 0vw 3vw;
 }
 
-.contact img {
+.logos:first-of-type img {
+  width: 7vw;
+  height: 7vw;
+}
+
+.logos img {
   width: 10vw;
   height: 10vw;
 }
