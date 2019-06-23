@@ -67,13 +67,43 @@ a:visited {
 }
 
 .title {
+  position: relative;
   font-size: 10vw;
   -webkit-transition: ease 1s;
   transition: ease 1s;
 }
 
+.title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    right: 0;
+    height: 0.5vh;
+    background: #000;
+    transition: ease 1.5s;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.5vh;
+    background: #000;
+    transition: ease 1.5s;
+}
+
+
 .title:hover {
-  transform: scale(1.20) rotate(-5deg);
+  transform: scale(0.95);
+}
+
+.title:hover::after {
+  width: 100%;
+}
+
+.title:hover::before {
+  width: 100%;
 }
 
 .about {
