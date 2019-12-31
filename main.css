@@ -6,11 +6,16 @@ body {
   font-size: 14px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   overflow: hidden;
   color: #32292F;
   background-color: #F0F7F4;
   font-family: 'Playfair Display', serif;
+  z-index: 999;
 }
 
 nav ul {
@@ -123,21 +128,86 @@ a:visited {
   align-items: flex-start;
 }
 
+.jumbotron.skills {
+  padding: 100px 0px;
+}
+
+.jumbotron.skills h2 {
+  font-size: 2.5em;
+  margin: 0px;
+}
+
 .logos {
-  display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
-  grid-gap: 5vw;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logos div {
-  display: inline;
+  flex: 0 0 calc(33.33vw - 3vw);
   padding: 0px 3vw;
+  margin: 10px auto;
+}
+
+@keyframes slowAppear {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.logos:first-of-type div {
+  width: 20vw;
+  margin: 30px auto;
+  position: relative;
+}
+
+.logos:first-of-type div:hover{
+  transition: 0.75s ease;
+  -o-transition: .75s ease;
+  -ms-transition: .75s ease;
+  -moz-transition: .75s ease;
+  -webkit-transition: .75s ease;
+  transform: scale(1.15);
+}
+
+.logos:first-of-type div::after {
+  animation-name: slowAppear;
+  animation-duration: 0.75s;
+  color: #32292F;
+  font-size: 1.15em;
+}
+
+.logos:first-of-type div:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .logos:first-of-type div img {
   max-width: 100%;
   object-fit: scale-down;
+  padding: 10px;
+  display: block;
+  height: 17.5vh;
+  margin: 0 auto;
 }
 
 .logos img {
