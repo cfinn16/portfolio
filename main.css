@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
+  width: 100vw;
 }
 
 * {
@@ -19,7 +20,7 @@ body {
 }
 
 nav ul {
-  padding-left: 1vw;
+  padding: 0 1vw;
 }
 
 nav ul li:first-child {
@@ -38,7 +39,6 @@ nav ul li {
 
 nav ul li:not(:first-of-type):hover {
   background-color: #70ABAF;
-  /* color: #C1CFDA; */
 }
 
 a:link {
@@ -53,6 +53,7 @@ a:visited {
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -139,8 +140,11 @@ a:visited {
 
 .logos {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+}
+
+.jumbotron.skills > .logos {
+  flex-wrap: wrap;
 }
 
 .logos div {
@@ -183,7 +187,7 @@ a:visited {
   -ms-transition: .75s ease;
   -moz-transition: .75s ease;
   -webkit-transition: .75s ease;
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .logos:first-of-type div::after {
@@ -213,4 +217,29 @@ a:visited {
 .logos img {
   height: 10vw;
   background: transparent;
+}
+
+.blogs-container {
+  text-align: center;
+}
+
+.blogs-container .blog {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: #A9FDAC;
+  width: 75%;
+  padding: 1px 0px;
+  margin: 3px 0px;
+  border-radius: 5px;
+}
+
+.blogs-container .blog img {
+  height: 30px;
+  width: 40px;
+  margin: auto 10px;
+}
+
+.blogs-container .blog p {
+  text-align: center;
+  padding: 2px 5px;
 }
