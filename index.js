@@ -21,16 +21,19 @@ document.addEventListener('DOMContentLoaded', async() => {
   console.log(blogsSection)
 
   filteredStories.map(story => {
+    const aTag = document.createElement('a')
+    aTag.setAttribute('href', `${story.link}`)
+    aTag.setAttribute('target', '_blank')
+    aTag.setAttribute('rel', 'noopener noreferrer')
     const div = document.createElement('div')
     div.className = "blog"
     div.innerHTML += `
-      <img src=${story.thumbnail} alt=${story.title} />
-      <a href=${story.link} target="_blank" rel="noopener noreferrer"><p>${story.title}</p></a>
+      <div class="image-container"><img src=${story.thumbnail} alt=${story.title} /></div>
+      <p>${story.title}</p>
     `
-    blogsSection.appendChild(div)
+    aTag.appendChild(div)
+    blogsSection.appendChild(aTag)
   })
-
-
 
   window.onscroll = function() {addSticky()}
 

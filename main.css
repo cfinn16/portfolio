@@ -221,6 +221,13 @@ a:visited {
 
 .blogs-container {
   text-align: center;
+  max-height: 90%;
+  overflow-y: auto;
+  margin-bottom: 25px;
+}
+
+.blogs-container h2 {
+  margin-top: 10px;
 }
 
 .blogs-container .blog {
@@ -230,16 +237,34 @@ a:visited {
   width: 75%;
   padding: 1px 0px;
   margin: 3px 0px;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
-.blogs-container .blog img {
-  height: 30px;
-  width: 40px;
+.blogs-container .blog:hover {
+  background-color: #b9feba;
+}
+
+.blogs-container .blog .image-container {
+  width: 100px;
   margin: auto 10px;
 }
 
+.blogs-container .blog img {
+  height: 45px;
+  margin: auto 0;
+  max-width: 95%;
+}
+
 .blogs-container .blog p {
-  text-align: center;
+  text-align: left;
+  font-size: 1.05em;
+  color: black;
   padding: 2px 5px;
+}
+
+@media only screen and (max-width: 767px) {
+  .blogs-container .blog .image-container {
+    width: 0px;
+    display: none;
+  }
 }
