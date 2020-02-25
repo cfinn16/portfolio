@@ -17,6 +17,7 @@ body {
   background-color: #F0F7F4;
   font-family: 'Playfair Display', serif;
   z-index: 999;
+  height: 10vh;
 }
 
 nav ul {
@@ -30,6 +31,7 @@ nav ul li:first-child {
 nav ul li {
   display: inline-block;
   list-style: none;
+  line-height: 5vh;
   color: #32292F;
   float: right;
   margin: 0.75vw;
@@ -38,7 +40,7 @@ nav ul li {
 }
 
 nav ul li:not(:first-of-type):hover {
-  background-color: #70ABAF;
+  border-bottom: 1px solid #c4c9c7;
 }
 
 a:link {
@@ -67,8 +69,8 @@ a:visited {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
-  height: 90vh;
+  padding-top: 100px;
+  height: calc(90vh + 100px);
   background-color: #E7E5E5;
 }
 
@@ -123,6 +125,10 @@ a:visited {
 .jumbotron p {
   padding: 0px 10vw;
   font-size: 2vw;
+}
+
+.jumbotron.about a {
+  border-bottom: 1px solid black;
 }
 
 .jumbotron .projects {
@@ -266,5 +272,8 @@ a:visited {
   .blogs-container .blog .image-container {
     width: 0px;
     display: none;
+  }
+  .navbar {
+    height: 7vh;
   }
 }
